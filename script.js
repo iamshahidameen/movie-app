@@ -14,7 +14,6 @@ serachForm.addEventListener('submit', (e) => {
     } else {
         window.location.reload;
     }
-    console.log(searchTerm);
     
 })
 //Get initial Movies
@@ -32,7 +31,6 @@ function showMovies(movies){
         const {title, poster_path, vote_average, overview } = movie;
         const movieElement = document.createElement('div');
         movieElement.classList.add('movie');
-        console.log(imgBaseURL+poster_path)
         movieElement.innerHTML = `
         <img src="${imgBaseURL + poster_path}" alt="${title}">
         <div class="movie-info">
